@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+:root {
+  --red: hsl(0, 78%, 62%); 
+  --cyan: hsl(180, 62%, 55%); 
+  --orange: hsl(34, 97%, 64%); 
+  --blue: hsl(212, 86%, 64%); 
+  --very-dark-blue: hsl(234, 12%, 34%); 
+  --grayish-blue: hsl(229, 6%, 66%); 
+  --very-light-gray: hsl(0, 0%, 98%); 
+}
+
+* {
+  margin: 0; 
+  padding: 0; 
+  box-sizing: 0;
+  border: none; 
+  outline: none; 
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  background-color: var(--very-light-gray);
+}
+
+main {
+  width: 90%;
+  margin: 3rem auto; 
+  text-align: center;
+}
+
+.intro {
+  padding: 1rem; 
+  margin-bottom: 3rem; 
+}
+
+.intro h2 {
+  font-weight: 200;
+  padding: 1rem 0;  
+  color: var(--grayish-blue); 
+}
+
+.intro h2 span {
+  font-weight: 600;
+  color: var(--very-dark-blue); 
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; 
+  padding: 1rem 1rem; 
+  text-align: left;
+}
+
+.card {
+  padding: 1rem; 
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem; 
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  border-radius: 0.5rem;
+}
+
+.card h3 {
+  color: var(--very-dark-blue); 
+}
+
+.card p {
+  color: var(--grayish-blue); 
+  font-size: 13px;
+}
+
+.card img {
+  width: 60px;
+  margin-left: auto;
+}
+
+.card p {
+  margin-bottom: 1.5rem;
+}
+
+.card.supervisor {
+  border-top: 4px solid var(--cyan);
+}
+
+.card.team {
+  border-top: 4px solid var(--red);
+}
+
+.card.karma {
+  border-top: 4px solid var(--orange);
+}
+
+.card.calc {
+  border-top: 4px solid var(--blue);
+}
