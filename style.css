@@ -37,13 +37,14 @@ main {
 
 .intro h2 {
   font-weight: 200;
-  padding: 1rem 0;  
+  padding: top 1rem; 
   color: var(--grayish-blue); 
 }
 
-.intro h2 span {
+.intro .power {
   font-weight: 600;
   color: var(--very-dark-blue); 
+  padding-bottom: 1rem;
 }
 
 .content {
@@ -95,4 +96,55 @@ main {
 
 .card.calc {
   border-top: 4px solid var(--blue);
+}
+
+/* Media Queries */
+
+@media (min-width: 768px) {
+  main {
+    width: 500px; 
+  }
+}
+
+@media (min-width: 1200px) {
+  main {
+    width: 80%;
+  }
+
+  .intro {
+    width: 40%;
+    margin: auto; 
+  }
+
+  .intro h2 {
+    width: 80%;  
+    margin: auto; 
+  }
+
+  .content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+      '. team .'
+      'sup team cal'
+      'sup karma cal'
+      '. karma .';
+  }
+
+  .card.supervisor {
+    grid-area: sup; 
+  }
+
+  .card.team {
+    grid-area: team; 
+  }
+
+  .card.karma {
+    grid-area: karma; 
+  }
+
+  .card.calc {
+    grid-area: cal;
+  }
 }
